@@ -9,12 +9,12 @@ import { MapComponent } from './components/map/map.component';
 
 // Angular Maps
 import { AgmCoreModule } from '@agm/core';
+import { MapEditComponent } from './components/map/map-edit.component';
 
 // for working @types/googlemaps@3.39.13
 
-
 @NgModule({
-  declarations: [AppComponent, MapComponent],
+  declarations: [AppComponent, MapComponent, MapEditComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,8 +25,8 @@ import { AgmCoreModule } from '@agm/core';
 
     // Angular Maps
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDBwM-xJTMBXCTig-dZDe9Wxrw3eBUXf7w'
-    })
+      apiKey: '',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

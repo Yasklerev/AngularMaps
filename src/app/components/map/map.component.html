@@ -16,7 +16,7 @@
             <strong>{{ item.title }}</strong>
             <p>{{ item.description }}</p>
             <div>
-              <button mat-raised-button color="primary">Editar</button>
+              <button (click)="editMarker(item)" mat-raised-button color="primary">Editar</button>
               <button (click)="deleteMarker(i)" mat-raised-button color="warn">Borrar</button>
             </div>
           </agm-info-window>
