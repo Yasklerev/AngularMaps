@@ -39,4 +39,9 @@ export class MapComponent implements OnInit {
   saveStorage(): void {
     localStorage.setItem('markers', JSON.stringify(this.markers));
   }
+
+  deleteMarker(i: number): void {
+    this.markers.splice(i, 1);
+    this.saveStorage();
+  }
 }
