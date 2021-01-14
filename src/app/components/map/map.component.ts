@@ -35,7 +35,7 @@ export class MapComponent implements OnInit {
     const newMarker = new Marker(coords.lat, coords.lng);
     this.markers.push(newMarker);
     this.saveStorage();
-    this.snackBar.open('Marcador agregado', 'Cerrar');
+    this.snackBar.open('Marcador agregado', 'Cerrar', {duration: 2000});
   }
 
   saveStorage(): void {
@@ -45,6 +45,6 @@ export class MapComponent implements OnInit {
   deleteMarker(i: number): void {
     this.markers.splice(i, 1);
     this.saveStorage();
-    this.snackBar.open('Marcador borrado', 'Cerrar');
+    this.snackBar.open('Marcador borrado', 'Cerrar', { duration: 2000 });
   }
 }
