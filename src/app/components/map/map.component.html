@@ -1,0 +1,27 @@
+<div class="row center-xs">
+  <div class="col-xs-12">
+    <div class="box">
+      <agm-map
+        (mapClick)="addMarker($event)"
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="15"
+      >
+        <agm-marker
+          *ngFor="let item of markers"
+          [latitude]="item.lat"
+          [longitude]="item.lng"
+        >
+          <agm-info-window>
+            <strong>{{ item.title }}</strong>
+            <p>{{ item.description }}</p>
+            <div>
+              <button mat-raised-button color="primary">Editar</button>
+              <button mat-raised-button color="warn">Borrar</button>
+            </div>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>

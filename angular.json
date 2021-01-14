@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Maps"
+  "defaultProject": "Maps",
+  "cli": {
+    "analytics": false
+  }
 }
